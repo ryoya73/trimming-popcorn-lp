@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',sans-serif;background:#FBF5EF;padding:20px;display:flex;justify-content:center}
+.wrap{max-width:560px;width:100%}
+.campaign{text-align:center;margin-bottom:14px}
+.campaign span{display:inline-block;background:linear-gradient(135deg,#C0392B,#E74C3C);color:#fff;font-size:14px;font-weight:900;padding:8px 24px;border-radius:8px;box-shadow:0 3px 10px rgba(192,57,43,0.3)}
+table{width:100%;border-collapse:collapse;font-size:12px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+thead th{background:#2C1810;color:#fff;font-weight:700;padding:12px 8px;text-align:center;font-size:11px}
+thead th:first-child{text-align:left;padding-left:14px;background:#1A0F08;width:90px}
+thead th .tag{display:block;font-size:9px;font-weight:400;opacity:0.8;margin-top:3px}
+thead th.rec{background:#C0392B}
+thead th.pop{background:#E67E22}
+tbody td{padding:10px 8px;text-align:center;border-bottom:1px solid #F0EBE5;vertical-align:middle;font-size:12px}
+tbody td:first-child{text-align:left;padding-left:14px;font-weight:600;color:#666;font-size:11px;background:#FAFAF8}
+.price-row td{font-size:11px;color:#bbb}
+.strike{text-decoration:line-through}
+.campaign-row td{font-weight:900;font-size:18px;color:#C0392B;padding:6px 8px}
+.campaign-row td:first-child{font-size:11px;font-weight:700;color:#C0392B}
+.unlimited{color:#06C755;font-weight:700}
+.badge{display:inline-block;font-size:9px;padding:3px 8px;border-radius:8px;font-weight:700}
+.wd{background:#FFF2CC;color:#B8860B}
+.all{background:#E8F5E9;color:#2E7D32}
+.note{text-align:center;margin-top:10px;font-size:12px;color:#C0392B;font-weight:700}
+.note2{text-align:center;font-size:10px;color:#999;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="campaign"><span>OPEN記念 先着10名限定 ずっと1,000円OFF</span></div>
+<table>
+<thead><tr>
+  <th>内容</th>
+  <th>ライト<span class="tag">シャンプーだけの子に</span></th>
+  <th class="rec">スタンダード<span class="tag">おすすめ</span></th>
+  <th class="pop">スタンダード+<span class="tag">人気No.1</span></th>
+  <th>プレミアム<span class="tag">しっかりケアしたい方</span></th>
+</tr></thead>
+<tbody>
+  <tr class="price-row"><td>通常価格（税抜）</td><td class="strike">5,980円</td><td class="strike">8,980円</td><td class="strike">9,980円</td><td>19,800円</td></tr>
+  <tr class="campaign-row"><td>記念価格（税抜）</td><td>4,980円</td><td>7,980円</td><td>8,980円</td><td>19,800円</td></tr>
+  <tr><td>📅 利用可能日</td><td><span class="badge wd">平日限定</span></td><td><span class="badge wd">平日限定</span></td><td><span class="badge all">全日OK</span></td><td><span class="badge all">全日OK</span></td></tr>
+  <tr><td>🛁 シャンプー</td><td>月2回まで</td><td>月1回まで</td><td>月1回まで</td><td>月2回まで</td></tr>
+  <tr><td>✂️ カット</td><td>なし</td><td>月1回まで</td><td>月1回まで</td><td>月2回まで</td></tr>
+  <tr><td>爪切り</td><td class="unlimited">無制限</td><td class="unlimited">無制限</td><td class="unlimited">無制限</td><td class="unlimited">無制限</td></tr>
+  <tr><td>耳掃除</td><td class="unlimited">無制限</td><td class="unlimited">無制限</td><td class="unlimited">無制限</td><td class="unlimited">無制限</td></tr>
+  <tr><td>肛門腺絞り</td><td class="unlimited">無制限</td><td class="unlimited">無制限</td><td class="unlimited">無制限</td><td class="unlimited">無制限</td></tr>
+</tbody>
+</table>
+<p class="note">先着10名限定・早い者勝ち！</p>
+<p class="note2">※ 一度適用されたらずーっとこの価格です。</p>
+</div>
+</body>
+</html>
