@@ -19,18 +19,25 @@ img{max-width:100%;display:block;margin:0 auto}
 /* セクション画像 */
 .hero-img{width:100%;display:block}
 
-/* CTAボタン */
-.cta-section{padding:24px 20px;background:#FFFBF5;text-align:center}
+/* CTAボタン (GPT image style) */
+.cta-section{padding:24px 16px;background:#FFFBF5;text-align:center}
 .cta-section.warm{background:linear-gradient(160deg,#FFF4E6,#FFE8D0)}
-.cta-line{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#06C755,#05B04B);color:#fff;font-size:16px;font-weight:900;padding:18px 24px;border-radius:60px;text-decoration:none;box-shadow:0 6px 20px rgba(6,199,85,0.4);transition:transform 0.2s;max-width:520px;margin:0 auto;position:relative}
-.cta-line:hover{transform:translateY(-2px)}
-.cta-line .line-badge{width:32px;height:32px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.cta-line .line-badge svg{width:20px;height:20px;fill:#06C755}
-.cta-line .arrow{width:20px;height:20px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.cta-line .arrow svg{width:14px;height:14px;fill:#fff}
-.cta-note{font-size:11px;color:#6B5B4E;margin-top:10px;font-weight:700}
-.cta-note span{margin:0 4px}
-.cta-note span::before{content:'✓ ';color:#06C755;font-weight:900}
+.cta-btn{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#52C264 0%,#3FA854 100%);color:#fff;padding:16px 18px 16px 14px;border-radius:50px;text-decoration:none;box-shadow:0 8px 20px rgba(63,168,84,0.35);transition:transform 0.2s;max-width:560px;margin:0 auto;position:relative;overflow:visible}
+.cta-btn:hover{transform:translateY(-2px)}
+.cta-badge-30sec{position:relative;flex-shrink:0;width:54px;height:54px;background:radial-gradient(circle at 30% 30%,#FFF4A8,#FFE066);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#5C4A1A;font-weight:900;font-size:11px;line-height:1.1;box-shadow:0 3px 8px rgba(0,0,0,0.15);text-align:center}
+.cta-badge-30sec .b-top{font-size:10px}
+.cta-badge-30sec .b-bottom{font-size:14px}
+.cta-line-icon{width:42px;height:42px;background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 4px rgba(0,0,0,0.08)}
+.cta-line-icon svg{width:26px;height:26px;fill:#06C755}
+.cta-content{flex:1;text-align:left;min-width:0}
+.cta-main{font-size:17px;font-weight:900;letter-spacing:-0.5px;line-height:1.2;display:flex;align-items:center;gap:8px}
+.cta-arrow{width:24px;height:24px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:auto}
+.cta-arrow svg{width:14px;height:14px;fill:#3FA854}
+.cta-sub{font-size:11px;font-weight:700;margin-top:4px;opacity:0.95;display:flex;align-items:center;gap:4px;border-top:1px dashed rgba(255,255,255,0.4);padding-top:4px}
+.cta-sub::after{content:'›';font-size:14px;font-weight:900}
+.cta-note{font-size:11px;color:#6B5B4E;margin-top:14px;font-weight:700;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.cta-note span{display:inline-flex;align-items:center;gap:4px}
+.cta-note span::before{content:'';width:14px;height:14px;background:#06C755;border-radius:3px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");background-size:11px;background-repeat:no-repeat;background-position:center}
 
 /* セクション */
 section{padding:0}
@@ -66,8 +73,16 @@ footer{background:#2C1810;padding:24px 20px;text-align:center;color:#A0948A;font
 footer p{margin-bottom:4px}
 
 /* Sticky CTA */
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);padding:10px 16px;box-shadow:0 -2px 12px rgba(0,0,0,0.1);z-index:100}
-.sticky-cta .cta-line{font-size:14px;padding:13px 20px;max-width:440px}
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);padding:8px 12px;box-shadow:0 -2px 12px rgba(0,0,0,0.1);z-index:100}
+.sticky-cta .cta-btn{padding:10px 14px;max-width:440px;gap:8px}
+.sticky-cta .cta-badge-30sec{width:42px;height:42px}
+.sticky-cta .cta-badge-30sec .b-top{font-size:8px}
+.sticky-cta .cta-badge-30sec .b-bottom{font-size:11px}
+.sticky-cta .cta-line-icon{width:34px;height:34px}
+.sticky-cta .cta-line-icon svg{width:22px;height:22px}
+.sticky-cta .cta-main{font-size:14px}
+.sticky-cta .cta-sub{display:none}
+.sticky-cta .cta-arrow{width:20px;height:20px}
 
 /* デスクトップ */
 @media(min-width:720px){
@@ -82,12 +97,16 @@ footer p{margin-bottom:4px}
 
 <!-- CTA1 -->
 <div class="cta-section warm">
-  <a href="https://lin.ee/XXXXXXX" class="cta-line">
-    <span class="line-badge">
+  <a href="https://lin.ee/XXXXXXX" class="cta-btn">
+    <span class="cta-badge-30sec"><span class="b-top">簡単</span><span class="b-bottom">30秒</span></span>
+    <span class="cta-line-icon">
       <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629"/></svg>
     </span>
-    LINEで無料体験を予約する
-    <span class="arrow"><svg viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="cta-content">
+      <span class="cta-main">LINE限定クーポンを受け取る</span>
+      <span class="cta-sub">予約状況の確認もこちらから</span>
+    </span>
+    <span class="cta-arrow"><svg viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
   </a>
 </div>
 
@@ -99,12 +118,16 @@ footer p{margin-bottom:4px}
 
 <!-- CTA2 -->
 <div class="cta-section">
-  <a href="https://lin.ee/XXXXXXX" class="cta-line">
-    <span class="line-badge">
+  <a href="https://lin.ee/XXXXXXX" class="cta-btn">
+    <span class="cta-badge-30sec"><span class="b-top">簡単</span><span class="b-bottom">30秒</span></span>
+    <span class="cta-line-icon">
       <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629"/></svg>
     </span>
-    LINEでこの価格を予約する
-    <span class="arrow"><svg viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="cta-content">
+      <span class="cta-main">LINE限定クーポンを受け取る</span>
+      <span class="cta-sub">予約状況の確認もこちらから</span>
+    </span>
+    <span class="cta-arrow"><svg viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
   </a>
   <p class="cta-note"><span>登録無料</span><span>予約もLINEで完結</span></p>
 </div>
@@ -144,15 +167,19 @@ footer p{margin-bottom:4px}
 </section>
 
 <!-- 7. Final CTA -->
-<div class="cta-section warm" style="padding:36px 20px">
-  <a href="https://lin.ee/XXXXXXX" class="cta-line">
-    <span class="line-badge">
+<div class="cta-section warm" style="padding:36px 16px">
+  <a href="https://lin.ee/XXXXXXX" class="cta-btn">
+    <span class="cta-badge-30sec"><span class="b-top">簡単</span><span class="b-bottom">30秒</span></span>
+    <span class="cta-line-icon">
       <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629"/></svg>
     </span>
-    まずは無料で体験予約する
-    <span class="arrow"><svg viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="cta-content">
+      <span class="cta-main">LINE限定クーポンを受け取る</span>
+      <span class="cta-sub">予約状況の確認もこちらから</span>
+    </span>
+    <span class="cta-arrow"><svg viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
   </a>
-  <p class="cta-note"><span>登録無料</span><span>無理な営業なし</span><span>30秒で完了</span></p>
+  <p class="cta-note"><span>登録無料</span><span>無理な営業なし</span><span>安心してご利用いただけます</span></p>
 </div>
 
 <footer>
@@ -162,12 +189,15 @@ footer p{margin-bottom:4px}
 
 <!-- Sticky CTA -->
 <div class="sticky-cta">
-  <a href="https://lin.ee/XXXXXXX" class="cta-line">
-    <span class="line-badge">
+  <a href="https://lin.ee/XXXXXXX" class="cta-btn">
+    <span class="cta-badge-30sec"><span class="b-top">簡単</span><span class="b-bottom">30秒</span></span>
+    <span class="cta-line-icon">
       <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629"/></svg>
     </span>
-    LINEで予約する
-    <span class="arrow"><svg viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="cta-content">
+      <span class="cta-main">LINE限定クーポンを受け取る</span>
+    </span>
+    <span class="cta-arrow"><svg viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
   </a>
 </div>
 
